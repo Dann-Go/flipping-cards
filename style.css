@@ -1,0 +1,69 @@
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.cards-container{
+    display: flex; 
+    /* display: inline-block; */
+    width: 100vw;
+    overflow-x: scroll;  
+    justify-content: flex-start;
+}
+
+.card{
+    perspective: 150rem;
+    -moz-perspective: 150rem;    
+    width: 200px;
+    min-width: 200px ;
+    height: 300px;
+    margin: 15px;
+    position: relative;
+    transition:all 1s;
+    transform-style: preserve-3d;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+.front, .back {
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+.front{
+    color: black;
+}
+
+.back {
+    padding: 20px;
+    box-sizing: border-box;
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+#add-btn{
+    font-size: 25px;
+    background-color: lightblue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#add-btn:hover{
+    background-color: red;
+    
+}
