@@ -92,6 +92,7 @@ function shuffle(array) {
     return array;
 }
 
+
 function onLoad() {
     const cardslist = document.getElementById("card-list");
     console.log(cardslist)
@@ -102,7 +103,7 @@ function onLoad() {
         let cardNode = createCardNode(card);
         cards.push(card);
         cardNodes.set(card.id, cardNode);
-        cardslist.appendChild(cardNode);
+        renderCard(cardslist, cardNode)
         lastIndex++;
     }
 
